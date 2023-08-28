@@ -6,7 +6,15 @@
 //
 
 import Foundation
+import UserNotifications
 
 final class HomeViewModel {
-    
+        
+    func requestNotification(delegate: UNUserNotificationCenterDelegate) {
+        let center = UNUserNotificationCenter.current()
+        center.delegate = delegate
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+            self.grantedNotif = ((error == nil) && granted)
+        }
+    }
 }

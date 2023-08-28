@@ -1,22 +1,61 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="task2_app" customModuleProvider="target">
             <connections>
+                <outlet property="timePicker" destination="PNG-gZ-Whi" id="8l4-XD-WE7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="PNG-gZ-Whi">
+                    <rect key="frame" x="32" y="91" width="329" height="216"/>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NL-Yo-Rzz">
+                    <rect key="frame" x="24" y="331" width="345" height="48"/>
+                    <color key="backgroundColor" systemColor="systemMintColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Bkx-zl-C96"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="SET ALARM">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapSetAlarm:" destination="-1" eventType="touchUpInside" id="CgI-ob-OLg"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="PNG-gZ-Whi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="0hH-qN-ddB"/>
+                <constraint firstItem="8NL-Yo-Rzz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="6d9-Ss-bHQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8NL-Yo-Rzz" secondAttribute="trailing" constant="24" id="C6D-Cq-lpV"/>
+                <constraint firstAttribute="trailing" secondItem="PNG-gZ-Whi" secondAttribute="trailing" constant="32" id="VZ8-qe-vzo"/>
+                <constraint firstItem="PNG-gZ-Whi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="feL-rG-rlY"/>
+                <constraint firstItem="8NL-Yo-Rzz" firstAttribute="top" secondItem="PNG-gZ-Whi" secondAttribute="bottom" constant="24" id="li4-hf-ptH"/>
+            </constraints>
+            <point key="canvasLocation" x="-103" y="20"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

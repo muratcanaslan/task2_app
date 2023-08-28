@@ -13,6 +13,10 @@
 		29FBC0522A9D26E50063C39F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FBC0502A9D26E50063C39F /* HomeViewController.swift */; };
 		29FBC0532A9D26E50063C39F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29FBC0512A9D26E50063C39F /* HomeViewController.xib */; };
 		29FBC0552A9D26F10063C39F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FBC0542A9D26F10063C39F /* HomeViewModel.swift */; };
+		29FBC0582A9D28040063C39F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FBC0572A9D28040063C39F /* UIViewController+Ext.swift */; };
+		29FBC05D2A9D359F0063C39F /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FBC05C2A9D359F0063C39F /* SoundManager.swift */; };
+		29FBC05F2A9D369B0063C39F /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FBC05E2A9D369B0063C39F /* Date+Ext.swift */; };
+		29FBC0612A9D59950063C39F /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 29FBC0602A9D59950063C39F /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		29FBC0502A9D26E50063C39F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		29FBC0512A9D26E50063C39F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		29FBC0542A9D26F10063C39F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		29FBC0572A9D28040063C39F /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		29FBC05C2A9D359F0063C39F /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		29FBC05E2A9D369B0063C39F /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		29FBC0602A9D59950063C39F /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 		29FBC0362A9D26540063C39F /* task2_app */ = {
 			isa = PBXGroup;
 			children = (
+				29FBC05B2A9D35980063C39F /* Managers */,
+				29FBC0562A9D27F90063C39F /* Extensions */,
 				29FBC0452A9D26550063C39F /* Info.plist */,
 				29FBC04B2A9D26AF0063C39F /* APP */,
 				29FBC04C2A9D26B60063C39F /* Resources */,
@@ -75,6 +85,7 @@
 		29FBC04C2A9D26B60063C39F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				29FBC0602A9D59950063C39F /* alarm_sound.mp3 */,
 				29FBC0402A9D26550063C39F /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -105,6 +116,23 @@
 				29FBC0542A9D26F10063C39F /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		29FBC0562A9D27F90063C39F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				29FBC0572A9D28040063C39F /* UIViewController+Ext.swift */,
+				29FBC05E2A9D369B0063C39F /* Date+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		29FBC05B2A9D35980063C39F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				29FBC05C2A9D359F0063C39F /* SoundManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +196,7 @@
 				29FBC0442A9D26550063C39F /* LaunchScreen.storyboard in Resources */,
 				29FBC0412A9D26550063C39F /* Assets.xcassets in Resources */,
 				29FBC0532A9D26E50063C39F /* HomeViewController.xib in Resources */,
+				29FBC0612A9D59950063C39F /* alarm_sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +209,10 @@
 			files = (
 				29FBC0382A9D26540063C39F /* AppDelegate.swift in Sources */,
 				29FBC0552A9D26F10063C39F /* HomeViewModel.swift in Sources */,
+				29FBC0582A9D28040063C39F /* UIViewController+Ext.swift in Sources */,
+				29FBC05F2A9D369B0063C39F /* Date+Ext.swift in Sources */,
 				29FBC0522A9D26E50063C39F /* HomeViewController.swift in Sources */,
+				29FBC05D2A9D359F0063C39F /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +356,6 @@
 				INFOPLIST_FILE = task2_app/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -352,7 +383,6 @@
 				INFOPLIST_FILE = task2_app/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
